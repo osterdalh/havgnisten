@@ -66,7 +66,7 @@ export function GridGroup({ images, children, childrenFirst = false }: GridGroup
             )}
 
             {images.map((image, index) => (
-                <div key={image} className={`${classes.content}`}>
+                <div key={index} className={`${classes.content}`}>
                     <img
                         ref={(element) => {
                             imageRefs.current[index] = element;

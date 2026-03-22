@@ -3,6 +3,7 @@ import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Navbar.module.scss';
 import logo from '../../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 const links = [
   { link: '/produkter', label: 'Produkter' },
@@ -16,9 +17,9 @@ export function Navbar() {
   const [active, setActive] = useState(window.location.pathname);
 
   const items = links.map((link) => (
-    <a
+    <Link
       key={link.label}
-      href={link.link}
+      to={link.link}
       className={classes.link}
       data-active={active === link.link || undefined}
       onClick={() => {
@@ -27,7 +28,7 @@ export function Navbar() {
       }}
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   return (

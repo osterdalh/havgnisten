@@ -11,7 +11,7 @@ export function InfoText({ title, texts}: InfoTextProps) {
   return (
     <>
      <Heading variant='h2'>{title}</Heading>
-     {texts.map(text => <p>{text}</p>)}
+     {texts.map((text, index) => <p key={index}>{text}</p>)}
     </>
   );
 }
