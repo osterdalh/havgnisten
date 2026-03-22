@@ -1,0 +1,13 @@
+@use '../../styles/breakpoints' as *;
+
+.container {
+  height: 230px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.5rem;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: 150px;
+      font-size: 1rem;
+
+  }
+}

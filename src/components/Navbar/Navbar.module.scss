@@ -1,0 +1,95 @@
+@use '../../styles/breakpoints' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+  background-color: #fdfdfb;
+}
+
+.inner {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  height: 38px;
+  width: auto;
+  padding-right: 15px;
+}
+
+.links {
+  align-items: center;
+}
+
+.link {
+  display: block;
+  position: relative;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 4px;
+    height: 1.5px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 180ms ease;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  [data-mantine-color-scheme] &[data-active] {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background-color: #fdfdfb;
+  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    display: none;
+  }
+}
+
+.mobileMenuInner {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  .link {
+    width: 100%;
+  }
+}

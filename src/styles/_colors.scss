@@ -1,0 +1,26 @@
+// Main brand colors
+$color-primary: #228be6;
+$color-secondary: #15aabf;
+$color-accent: #7950f2;
+
+// Neutral colors
+$color-dark: #212121;
+$color-gray: #909296;
+$color-light: #f1f3f5;
+$color-white: #ffffff;
+
+// Semantic colors
+$color-success: #40c057;
+$color-warning: #fab005;
+$color-error: #fa5252;
+$color-info: #339af0;
+
+// Background colors
+$bg-primary: #e2d7ca;
+$bg-secondary: $color-light;
+$bg-dark: $color-dark;
+
+// Text colors
+$text-primary: $color-dark;
+$text-secondary: $color-gray;
+$text-inverse: $color-white;

@@ -1,0 +1,74 @@
+@use './colors' as *;
+@use './breakpoints' as *;
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 2px;
+  padding-top: 56px;
+  color: $text-primary;
+  background-color: $bg-primary;
+  line-height: 1.5;
+}
+
+p {
+    font-family: 'Jost', serif !important;
+
+}
+// Remove default link styles
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Improve image defaults
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Remove button styles
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+// Accessibility
+:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+// Scrollbar styling (webkit browsers)
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-gray;
+  border-radius: 4px;
+
+  &:hover {
+    background: $color-dark;
+  }
+}

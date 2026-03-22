@@ -1,0 +1,112 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/colors' as *;
+
+.wrapper {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 130px;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    height: 400px;
+  }
+}
+
+.secondaryWrapper {
+  max-height: 450px;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.variant{
+  background-color: $bg-primary;
+  min-height: 170px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+.titleAndText{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  color: $text-primary;
+}
+
+.title {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 40px;
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+  color: var(--mantine-color-white);
+  margin: 0;
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+.highlight {
+  color: var(--mantine-color-primary-4);
+}
+
+.description {
+  color: var(--mantine-color-gray-0);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-font-size-md);
+    text-align: left;
+  }
+}
+
+.controls {
+  margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+  display: flex;
+  justify-content: center;
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+  }
+}
+
+.control {
+  height: 42px;
+  font-size: var(--mantine-font-size-md);
+
+  &:not(:first-of-type) {
+    margin-left: var(--mantine-spacing-md);
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    &:not(:first-of-type) {
+      margin-top: var(--mantine-spacing-md);
+      margin-left: 0;
+    }
+  }
+}
+
+.secondaryControl {
+  color: var(--mantine-color-white);
+  background-color: rgba(255, 255, 255, 0.4);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+}

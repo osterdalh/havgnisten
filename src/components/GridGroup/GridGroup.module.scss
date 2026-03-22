@@ -1,0 +1,32 @@
+@use '../../styles/breakpoints' as *;
+
+
+
+
+.content {
+    height: 650px;
+    overflow: hidden;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        height: 400px;
+    }
+}
+
+.parallaxImage {
+    --parallax-offset: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate3d(0, var(--parallax-offset), 0) scale(1.12);
+    will-change: transform;
+}
+
+.mobile {
+    @media (max-width: $mantine-breakpoint-md) {
+        display: none;
+    }
+}
+
+.infoContent{
+    display: block;
+}
